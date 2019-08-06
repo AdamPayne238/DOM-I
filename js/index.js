@@ -97,8 +97,9 @@ ctaimg.setAttribute('src', siteContent.cta['img-src']);
 
 //TOP HEADER 4
 const topH4 = document.querySelectorAll('.top-content .text-content h4');
+    //Features h4
     topH4[0].textContent = siteContent['main-content']['features-h4'];
-
+    //About h4
     topH4[1].textContent = siteContent['main-content']['about-h4'];
 
 //TOP PARAGRAPH
@@ -109,37 +110,46 @@ const topP = document.querySelectorAll('.top-content .text-content p');
 
 //BOTTOM HEADER 4
 const bottomH4 = document.querySelectorAll('.bottom-content .text-content h4');
+    //Services h4
     bottomH4[0].textContent = siteContent['main-content']['services-h4'];
-
+    //Product h4
     bottomH4[1].textContent = siteContent['main-content']['product-h4'];
-
+    //Vision h4
     bottomH4[2].textContent = siteContent['main-content']['vision-h4'];
 
 //BOTTOM PARAGRAPH
 const bottomP = document.querySelectorAll('.bottom-content .text-content p');
+    //Services Paragraph
     bottomP[0].textContent = siteContent['main-content']['services-content'];
-
+    //Product Paragraph
     bottomP[1].textContent = siteContent['main-content']['product-content'];
-
+    //Vision Paragraph
     bottomP[2].textContent = siteContent['main-content']['vision-content'];
 
 
 //CONTACT HEADER 4
 const contactH4 = document.querySelectorAll('.contact h4');
-
+    //Contact H4
     contactH4[0].textContent = siteContent['contact']['contact-h4'];
 //CONTACT PARAGRAPH
 const contactP = document.querySelectorAll('.contact p');
-
+    //Address
     contactP[0].textContent = siteContent['contact']['address'];
-
+    //FIX LINE BREAK ADDRESS
+    let addressArray = siteContent['contact']['address'].split(' ');
+    addressArray.splice(4, 0, '\r\n');
+    contactP[0].innerText = addressArray.join(' ');
+    //
+    //Phone
     contactP[1].textContent = siteContent['contact']['phone'];
-
+    //Email
     contactP[2].textContent = siteContent['contact']['email'];
+
+ 
 
 //FOOTER
 const footer = document.querySelector('footer p');
-
+    //Copyright
     footer.textContent = siteContent['footer']['copyright'];
 
 
